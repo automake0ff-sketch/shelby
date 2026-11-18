@@ -1,0 +1,4367 @@
+{
+ "auth": {
+  "oauth2": {
+   "scopes": {
+    "https://www.googleapis.com/auth/userinfo.email": {
+     "description": "View your email address"
+    }
+   }
+  }
+ },
+ "basePath": "/_ah/api/clientandroidendpoint/v1/",
+ "baseUrl": "https://pikotea-server-2.appspot.com/_ah/api/clientandroidendpoint/v1/",
+ "batchPath": "batch",
+ "description": "This is an API",
+ "discoveryVersion": "v1",
+ "icons": {
+  "x16": "https://www.gstatic.com/images/branding/product/1x/googleg_16dp.png",
+  "x32": "https://www.gstatic.com/images/branding/product/1x/googleg_32dp.png"
+ },
+ "id": "clientandroidendpoint:v1",
+ "kind": "discovery#restDescription",
+ "methods": {
+  "abandonarTable": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.abandonarTable",
+   "parameterOrder": [
+    "idRest",
+    "idSale"
+   ],
+   "parameters": {
+    "idRest": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idSale": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    }
+   },
+   "path": "abandonarTable/{idRest}/{idSale}",
+   "response": {
+    "$ref": "ResponseAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "abandonarTableAnonimo": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.abandonarTableAnonimo",
+   "parameterOrder": [
+    "idRest",
+    "idSale"
+   ],
+   "parameters": {
+    "idRest": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idSale": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    }
+   },
+   "path": "abandonarTableAnonimo/{idRest}/{idSale}",
+   "response": {
+    "$ref": "ResponseAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "addBooking": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.addBooking",
+   "parameterOrder": [
+    "idRestaurant"
+   ],
+   "parameters": {
+    "idRestaurant": {
+     "location": "query",
+     "required": true,
+     "type": "string"
+    }
+   },
+   "path": "addBooking",
+   "request": {
+    "$ref": "BookingAndroid",
+    "parameterName": "resource"
+   },
+   "response": {
+    "$ref": "ResponseAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "addBookingAnonimo": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.addBookingAnonimo",
+   "parameterOrder": [
+    "idRestaurant"
+   ],
+   "parameters": {
+    "idRestaurant": {
+     "location": "query",
+     "required": true,
+     "type": "string"
+    }
+   },
+   "path": "addBookingAnonimo",
+   "request": {
+    "$ref": "BookingAndroid",
+    "parameterName": "resource"
+   },
+   "response": {
+    "$ref": "ResponseAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "cancelOrder": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.cancelOrder",
+   "parameterOrder": [
+    "idRest",
+    "idSale",
+    "idOrder"
+   ],
+   "parameters": {
+    "idRest": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idSale": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idOrder": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    }
+   },
+   "path": "cancelOrder/{idRest}/{idSale}/{idOrder}",
+   "response": {
+    "$ref": "ResponseAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "cancelOrderAnonimo": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.cancelOrderAnonimo",
+   "parameterOrder": [
+    "idRest",
+    "idSale",
+    "idOrder"
+   ],
+   "parameters": {
+    "idRest": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idSale": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idOrder": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    }
+   },
+   "path": "cancelOrderAnonimo/{idRest}/{idSale}/{idOrder}",
+   "response": {
+    "$ref": "ResponseAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "checkRestaurant": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.checkRestaurant",
+   "parameterOrder": [
+    "idRestaurant",
+    "crcRestaurant",
+    "locale",
+    "forced"
+   ],
+   "parameters": {
+    "idRestaurant": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "crcRestaurant": {
+     "format": "int64",
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "locale": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "forced": {
+     "location": "path",
+     "required": true,
+     "type": "boolean"
+    }
+   },
+   "path": "checkRestaurant/{idRestaurant}/{crcRestaurant}/{locale}/{forced}",
+   "request": {
+    "$ref": "MenuAndroid",
+    "parameterName": "resource"
+   },
+   "response": {
+    "$ref": "ResponseAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "checkRestaurantTipo": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.checkRestaurantTipo",
+   "parameterOrder": [
+    "idRestaurant",
+    "crcRestaurant",
+    "locale",
+    "forced",
+    "tipoPedido"
+   ],
+   "parameters": {
+    "idRestaurant": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "crcRestaurant": {
+     "format": "int64",
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "locale": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "forced": {
+     "location": "path",
+     "required": true,
+     "type": "boolean"
+    },
+    "tipoPedido": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    }
+   },
+   "path": "checkRestaurantTipo/{idRestaurant}/{crcRestaurant}/{locale}/{forced}/{tipoPedido}",
+   "request": {
+    "$ref": "MenuAndroid",
+    "parameterName": "resource"
+   },
+   "response": {
+    "$ref": "ResponseAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "createCard": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.createCard",
+   "parameterOrder": [
+    "idRest"
+   ],
+   "parameters": {
+    "idRest": {
+     "location": "query",
+     "required": true,
+     "type": "string"
+    }
+   },
+   "path": "createCard",
+   "request": {
+    "$ref": "StripeCardPikotea",
+    "parameterName": "resource"
+   },
+   "response": {
+    "$ref": "ResponseStripe"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "createPaymentIntentToSale": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.createPaymentIntentToSale",
+   "parameterOrder": [
+    "idRestaurant",
+    "idSale"
+   ],
+   "parameters": {
+    "idRestaurant": {
+     "location": "query",
+     "required": true,
+     "type": "string"
+    },
+    "idSale": {
+     "location": "query",
+     "required": true,
+     "type": "string"
+    }
+   },
+   "path": "createPaymentIntentToSale",
+   "response": {
+    "$ref": "ResponseAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "createPaymentIntentToSaleWithPMId": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.createPaymentIntentToSaleWithPMId",
+   "parameterOrder": [
+    "idPM",
+    "idRestaurant",
+    "idSale",
+    "propina",
+    "returnURL"
+   ],
+   "parameters": {
+    "idRestaurant": {
+     "location": "query",
+     "required": true,
+     "type": "string"
+    },
+    "idSale": {
+     "location": "query",
+     "required": true,
+     "type": "string"
+    },
+    "idPM": {
+     "location": "query",
+     "required": true,
+     "type": "string"
+    },
+    "propina": {
+     "format": "float",
+     "location": "query",
+     "required": true,
+     "type": "number"
+    },
+    "returnURL": {
+     "location": "query",
+     "required": true,
+     "type": "string"
+    }
+   },
+   "path": "createPaymentIntentToSaleWithPMId",
+   "response": {
+    "$ref": "ResponseAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "denunciarContenido": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.denunciarContenido",
+   "parameterOrder": [
+    "idRest",
+    "motivo"
+   ],
+   "parameters": {
+    "idRest": {
+     "location": "query",
+     "required": true,
+     "type": "string"
+    },
+    "motivo": {
+     "location": "query",
+     "required": true,
+     "type": "string"
+    }
+   },
+   "path": "denunciarContenido",
+   "response": {
+    "$ref": "ResponseAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "getBookingAvailable": {
+   "httpMethod": "GET",
+   "id": "clientandroidendpoint.getBookingAvailable",
+   "parameterOrder": [
+    "date",
+    "idRestaurant"
+   ],
+   "parameters": {
+    "idRestaurant": {
+     "location": "query",
+     "required": true,
+     "type": "string"
+    },
+    "date": {
+     "location": "query",
+     "required": true,
+     "type": "string"
+    }
+   },
+   "path": "getBookingAvailable",
+   "response": {
+    "$ref": "JsonMap"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "getCards": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.getCards",
+   "parameterOrder": [
+    "stripeID"
+   ],
+   "parameters": {
+    "stripeID": {
+     "location": "query",
+     "required": true,
+     "type": "string"
+    }
+   },
+   "path": "getCards",
+   "response": {
+    "$ref": "ResponseStripe"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "getCards2": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.getCards2",
+   "parameterOrder": [
+    "stripeID"
+   ],
+   "parameters": {
+    "stripeID": {
+     "location": "query",
+     "required": true,
+     "type": "string"
+    }
+   },
+   "path": "getCards2",
+   "response": {
+    "$ref": "ResponseStripe"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "getClient": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.getClient",
+   "parameters": {
+    "idRest": {
+     "location": "query",
+     "type": "string"
+    }
+   },
+   "path": "getClient",
+   "response": {
+    "$ref": "ResponseAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "getRestaurantBooking": {
+   "httpMethod": "GET",
+   "id": "clientandroidendpoint.getRestaurantBooking",
+   "parameterOrder": [
+    "idRestaurant",
+    "locale"
+   ],
+   "parameters": {
+    "idRestaurant": {
+     "location": "query",
+     "required": true,
+     "type": "string"
+    },
+    "locale": {
+     "location": "query",
+     "required": true,
+     "type": "string"
+    },
+    "withMenu": {
+     "location": "query",
+     "type": "boolean"
+    }
+   },
+   "path": "getRestaurantBooking",
+   "response": {
+    "$ref": "ResponseAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "getRestaurantComplete": {
+   "httpMethod": "GET",
+   "id": "clientandroidendpoint.getRestaurantComplete",
+   "parameterOrder": [
+    "idMenu",
+    "idRest",
+    "locale"
+   ],
+   "parameters": {
+    "idRest": {
+     "location": "query",
+     "required": true,
+     "type": "string"
+    },
+    "locale": {
+     "location": "query",
+     "required": true,
+     "type": "string"
+    },
+    "idMenu": {
+     "location": "query",
+     "required": true,
+     "type": "string"
+    }
+   },
+   "path": "getRestaurantComplete",
+   "response": {
+    "$ref": "ResponseAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "getRestaurantCompleteTipo": {
+   "httpMethod": "GET",
+   "id": "clientandroidendpoint.getRestaurantCompleteTipo",
+   "parameterOrder": [
+    "idRest",
+    "locale",
+    "tipoPedido"
+   ],
+   "parameters": {
+    "idRest": {
+     "location": "query",
+     "required": true,
+     "type": "string"
+    },
+    "locale": {
+     "location": "query",
+     "required": true,
+     "type": "string"
+    },
+    "idMenu": {
+     "location": "query",
+     "type": "string"
+    },
+    "tipoPedido": {
+     "location": "query",
+     "required": true,
+     "type": "string"
+    }
+   },
+   "path": "getRestaurantCompleteTipo",
+   "response": {
+    "$ref": "ResponseAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "getRestaurantFromCP": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.getRestaurantFromCP",
+   "parameterOrder": [
+    "postalCode"
+   ],
+   "parameters": {
+    "postalCode": {
+     "location": "query",
+     "required": true,
+     "type": "string"
+    },
+    "cursor": {
+     "location": "query",
+     "type": "string"
+    },
+    "limit": {
+     "format": "int32",
+     "location": "query",
+     "type": "integer"
+    }
+   },
+   "path": "getRestaurantFromCP",
+   "response": {
+    "$ref": "RestaurantListAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "getRestaurantFromCPCarta": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.getRestaurantFromCPCarta",
+   "parameterOrder": [
+    "postalCode"
+   ],
+   "parameters": {
+    "postalCode": {
+     "location": "query",
+     "required": true,
+     "type": "string"
+    },
+    "cursor": {
+     "location": "query",
+     "type": "string"
+    },
+    "limit": {
+     "format": "int32",
+     "location": "query",
+     "type": "integer"
+    }
+   },
+   "path": "getRestaurantFromCPCarta",
+   "response": {
+    "$ref": "RestaurantListAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "getRestaurantFromCPRecoger": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.getRestaurantFromCPRecoger",
+   "parameterOrder": [
+    "postalCode"
+   ],
+   "parameters": {
+    "postalCode": {
+     "location": "query",
+     "required": true,
+     "type": "string"
+    },
+    "cursor": {
+     "location": "query",
+     "type": "string"
+    },
+    "limit": {
+     "format": "int32",
+     "location": "query",
+     "type": "integer"
+    }
+   },
+   "path": "getRestaurantFromCPRecoger",
+   "response": {
+    "$ref": "RestaurantListAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "getRestaurantsFromCP": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.getRestaurantsFromCP",
+   "parameterOrder": [
+    "postalCode"
+   ],
+   "parameters": {
+    "postalCode": {
+     "location": "query",
+     "required": true,
+     "type": "string"
+    },
+    "cursor": {
+     "location": "query",
+     "type": "string"
+    },
+    "limit": {
+     "format": "int32",
+     "location": "query",
+     "type": "integer"
+    }
+   },
+   "path": "getRestaurantsFromCP",
+   "response": {
+    "$ref": "RestaurantListAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "pedirCamarero": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.pedirCamarero",
+   "parameterOrder": [
+    "idRest",
+    "idSale"
+   ],
+   "parameters": {
+    "idRest": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idSale": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    }
+   },
+   "path": "pedirCamarero/{idRest}/{idSale}",
+   "response": {
+    "$ref": "ResponseAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "pedirCamareroAnonimo": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.pedirCamareroAnonimo",
+   "parameterOrder": [
+    "idRest",
+    "idSale"
+   ],
+   "parameters": {
+    "idRest": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idSale": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    }
+   },
+   "path": "pedirCamareroAnonimo/{idRest}/{idSale}",
+   "response": {
+    "$ref": "ResponseAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "pedirCuenta": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.pedirCuenta",
+   "parameterOrder": [
+    "idRest",
+    "idSale"
+   ],
+   "parameters": {
+    "idRest": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idSale": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    }
+   },
+   "path": "pedirCuenta/{idRest}/{idSale}",
+   "response": {
+    "$ref": "ResponseAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "pedirCuentaAnonimo": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.pedirCuentaAnonimo",
+   "parameterOrder": [
+    "idRest",
+    "idSale"
+   ],
+   "parameters": {
+    "idRest": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idSale": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    }
+   },
+   "path": "pedirCuentaAnonimo/{idRest}/{idSale}",
+   "response": {
+    "$ref": "ResponseAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "refreshHistorial": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.refreshHistorial",
+   "parameterOrder": [
+    "idRest",
+    "locale"
+   ],
+   "parameters": {
+    "idRest": {
+     "location": "query",
+     "required": true,
+     "type": "string"
+    },
+    "locale": {
+     "location": "query",
+     "required": true,
+     "type": "string"
+    }
+   },
+   "path": "refreshHistorial",
+   "response": {
+    "$ref": "ResponseAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "refreshSale": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.refreshSale",
+   "parameterOrder": [
+    "idRest",
+    "idSale",
+    "idGCM",
+    "locale"
+   ],
+   "parameters": {
+    "idRest": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idSale": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idGCM": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "locale": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    }
+   },
+   "path": "refreshSale/{idRest}/{idSale}/{idGCM}/{locale}",
+   "response": {
+    "$ref": "ResponseAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "refreshSaleAnonimo": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.refreshSaleAnonimo",
+   "parameterOrder": [
+    "idRest",
+    "idSale",
+    "idGCM",
+    "locale"
+   ],
+   "parameters": {
+    "idRest": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idSale": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idGCM": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "locale": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    }
+   },
+   "path": "refreshSaleAnonimo/{idRest}/{idSale}/{idGCM}/{locale}",
+   "response": {
+    "$ref": "ResponseAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "removeCard": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.removeCard",
+   "parameterOrder": [
+    "cardId",
+    "stripeID"
+   ],
+   "parameters": {
+    "stripeID": {
+     "location": "query",
+     "required": true,
+     "type": "string"
+    },
+    "cardId": {
+     "location": "query",
+     "required": true,
+     "type": "string"
+    }
+   },
+   "path": "removeCard",
+   "response": {
+    "$ref": "ResponseAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "removeClient": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.removeClient",
+   "path": "removeClient",
+   "response": {
+    "$ref": "ResponseAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "salePayed": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.salePayed",
+   "parameterOrder": [
+    "idRestaurant",
+    "idSale"
+   ],
+   "parameters": {
+    "idRestaurant": {
+     "location": "query",
+     "required": true,
+     "type": "string"
+    },
+    "idSale": {
+     "location": "query",
+     "required": true,
+     "type": "string"
+    }
+   },
+   "path": "salePayed",
+   "response": {
+    "$ref": "ResponseAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "sendOrderAnonimo": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.sendOrderAnonimo",
+   "parameterOrder": [
+    "idRestaurant",
+    "idSale",
+    "idGCM",
+    "locale"
+   ],
+   "parameters": {
+    "idRestaurant": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idSale": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idGCM": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "locale": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    }
+   },
+   "path": "sendOrderAnonimo/{idRestaurant}/{idSale}/{idGCM}/{locale}",
+   "request": {
+    "$ref": "OrderAndroid",
+    "parameterName": "resource"
+   },
+   "response": {
+    "$ref": "OrderAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "sendOrderDomicilio": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.sendOrderDomicilio",
+   "parameterOrder": [
+    "idRestaurant",
+    "idGCM",
+    "address",
+    "phone",
+    "locale",
+    "token",
+    "formaPago"
+   ],
+   "parameters": {
+    "idRestaurant": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idGCM": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "address": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "phone": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "nameRecoger": {
+     "location": "query",
+     "type": "string"
+    },
+    "locale": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "token": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "formaPago": {
+     "format": "int32",
+     "location": "path",
+     "required": true,
+     "type": "integer"
+    },
+    "cambioNecesario": {
+     "format": "float",
+     "location": "query",
+     "type": "number"
+    },
+    "clientName": {
+     "location": "query",
+     "type": "string"
+    },
+    "dateEntrega": {
+     "format": "int64",
+     "location": "query",
+     "type": "string"
+    }
+   },
+   "path": "sendOrderDomicilio/{idRestaurant}/{idGCM}/{address}/{phone}/{locale}/{token}/{formaPago}",
+   "request": {
+    "$ref": "OrderAndroid",
+    "parameterName": "resource"
+   },
+   "response": {
+    "$ref": "OrderAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "sendOrderDomicilio2": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.sendOrderDomicilio2",
+   "parameterOrder": [
+    "idRestaurant",
+    "idGCM",
+    "address",
+    "phone",
+    "locale",
+    "token",
+    "idMenu",
+    "formaPago"
+   ],
+   "parameters": {
+    "idRestaurant": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idGCM": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "address": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "phone": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "locale": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "token": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idMenu": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "formaPago": {
+     "format": "int32",
+     "location": "path",
+     "required": true,
+     "type": "integer"
+    },
+    "nameRecoger": {
+     "location": "query",
+     "type": "string"
+    },
+    "cambioNecesario": {
+     "format": "float",
+     "location": "query",
+     "type": "number"
+    },
+    "clientName": {
+     "location": "query",
+     "type": "string"
+    },
+    "dateEntrega": {
+     "format": "int64",
+     "location": "query",
+     "type": "string"
+    }
+   },
+   "path": "sendOrderDomicilio2/{idRestaurant}/{idGCM}/{address}/{phone}/{locale}/{token}/{idMenu}/{formaPago}",
+   "request": {
+    "$ref": "OrderAndroid",
+    "parameterName": "resource"
+   },
+   "response": {
+    "$ref": "OrderAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "sendOrderDomicilioStripe": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.sendOrderDomicilioStripe",
+   "parameterOrder": [
+    "idRestaurant",
+    "idGCM",
+    "address",
+    "phone",
+    "locale",
+    "token",
+    "idMenu",
+    "formaPago"
+   ],
+   "parameters": {
+    "idRestaurant": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idGCM": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "address": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "phone": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "locale": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "token": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idMenu": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "formaPago": {
+     "format": "int32",
+     "location": "path",
+     "required": true,
+     "type": "integer"
+    },
+    "nameRecoger": {
+     "location": "query",
+     "type": "string"
+    },
+    "cambioNecesario": {
+     "format": "float",
+     "location": "query",
+     "type": "number"
+    },
+    "clientName": {
+     "location": "query",
+     "type": "string"
+    },
+    "dateEntrega": {
+     "format": "int64",
+     "location": "query",
+     "type": "string"
+    }
+   },
+   "path": "sendOrderDomicilioStripe/{idRestaurant}/{idGCM}/{address}/{phone}/{locale}/{token}/{idMenu}/{formaPago}",
+   "request": {
+    "$ref": "OrderAndroid",
+    "parameterName": "resource"
+   },
+   "response": {
+    "$ref": "ResponseAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "sendOrderDomicilioStripePropina": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.sendOrderDomicilioStripePropina",
+   "parameterOrder": [
+    "idRestaurant",
+    "idGCM",
+    "address",
+    "phone",
+    "locale",
+    "token",
+    "idMenu",
+    "formaPago"
+   ],
+   "parameters": {
+    "idRestaurant": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idGCM": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "address": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "phone": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "locale": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "token": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idMenu": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "formaPago": {
+     "format": "int32",
+     "location": "path",
+     "required": true,
+     "type": "integer"
+    },
+    "nameRecoger": {
+     "location": "query",
+     "type": "string"
+    },
+    "cambioNecesario": {
+     "format": "float",
+     "location": "query",
+     "type": "number"
+    },
+    "clientName": {
+     "location": "query",
+     "type": "string"
+    },
+    "dateEntrega": {
+     "format": "int64",
+     "location": "query",
+     "type": "string"
+    },
+    "propina": {
+     "format": "float",
+     "location": "query",
+     "type": "number"
+    },
+    "idPM": {
+     "location": "query",
+     "type": "string"
+    },
+    "returnURL": {
+     "location": "query",
+     "type": "string"
+    }
+   },
+   "path": "sendOrderDomicilioStripePropina/{idRestaurant}/{idGCM}/{address}/{phone}/{locale}/{token}/{idMenu}/{formaPago}",
+   "request": {
+    "$ref": "OrderAndroid",
+    "parameterName": "resource"
+   },
+   "response": {
+    "$ref": "ResponseAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "sendorder": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.sendorder",
+   "parameterOrder": [
+    "idRestaurant",
+    "idSale",
+    "idGCM",
+    "locale"
+   ],
+   "parameters": {
+    "idRestaurant": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idSale": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idGCM": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "locale": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    }
+   },
+   "path": "sendOrder/{idRestaurant}/{idSale}/{idGCM}/{locale}",
+   "request": {
+    "$ref": "OrderAndroid",
+    "parameterName": "resource"
+   },
+   "response": {
+    "$ref": "OrderAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "setAutentication": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.setAutentication",
+   "parameterOrder": [
+    "idRest",
+    "idSale",
+    "crcRestaurant",
+    "idDCMClientAndroid",
+    "locale"
+   ],
+   "parameters": {
+    "idRest": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idSale": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "crcRestaurant": {
+     "format": "int64",
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idDCMClientAndroid": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "locale": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "clientName": {
+     "location": "query",
+     "type": "string"
+    },
+    "comensales": {
+     "location": "query",
+     "type": "string"
+    }
+   },
+   "path": "setAutentication/{idRest}/{idSale}/{crcRestaurant}/{idDCMClientAndroid}/{locale}",
+   "request": {
+    "$ref": "MenuAndroid",
+    "parameterName": "resource"
+   },
+   "response": {
+    "$ref": "ResponseAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "setAutenticationAnonimo": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.setAutenticationAnonimo",
+   "parameterOrder": [
+    "idRest",
+    "idSale",
+    "crcRestaurant",
+    "idDCMClientAndroid",
+    "locale"
+   ],
+   "parameters": {
+    "idRest": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idSale": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "crcRestaurant": {
+     "format": "int64",
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idDCMClientAndroid": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "locale": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "clientName": {
+     "location": "query",
+     "type": "string"
+    },
+    "comensales": {
+     "location": "query",
+     "type": "string"
+    }
+   },
+   "path": "setAutenticationAnonimo/{idRest}/{idSale}/{crcRestaurant}/{idDCMClientAndroid}/{locale}",
+   "request": {
+    "$ref": "MenuAndroid",
+    "parameterName": "resource"
+   },
+   "response": {
+    "$ref": "ResponseAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "setAutenticationTable": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.setAutenticationTable",
+   "parameterOrder": [
+    "idRest",
+    "table",
+    "idDCMClientAndroid",
+    "locale"
+   ],
+   "parameters": {
+    "idRest": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "table": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idDCMClientAndroid": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "locale": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idWifi": {
+     "location": "query",
+     "type": "string"
+    },
+    "clientName": {
+     "location": "query",
+     "type": "string"
+    }
+   },
+   "path": "setAutenticationTable/{idRest}/{table}/{idDCMClientAndroid}/{locale}",
+   "request": {
+    "$ref": "MenuAndroid",
+    "parameterName": "resource"
+   },
+   "response": {
+    "$ref": "ResponseAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "setAutenticationTableComen": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.setAutenticationTableComen",
+   "parameterOrder": [
+    "idRest",
+    "table",
+    "idDCMClientAndroid",
+    "locale",
+    "comensales"
+   ],
+   "parameters": {
+    "idRest": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "table": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idDCMClientAndroid": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "locale": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idWifi": {
+     "location": "query",
+     "type": "string"
+    },
+    "clientName": {
+     "location": "query",
+     "type": "string"
+    },
+    "comensales": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    }
+   },
+   "path": "setAutenticationTableComen/{idRest}/{table}/{idDCMClientAndroid}/{locale}/{comensales}",
+   "request": {
+    "$ref": "MenuAndroid",
+    "parameterName": "resource"
+   },
+   "response": {
+    "$ref": "ResponseAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "setAutenticationTableComenAnonimo": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.setAutenticationTableComenAnonimo",
+   "parameterOrder": [
+    "idRest",
+    "table",
+    "idDCMClientAndroid",
+    "locale",
+    "comensales"
+   ],
+   "parameters": {
+    "idRest": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "table": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idDCMClientAndroid": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "locale": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idWifi": {
+     "location": "query",
+     "type": "string"
+    },
+    "clientName": {
+     "location": "query",
+     "type": "string"
+    },
+    "comensales": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    }
+   },
+   "path": "setAutenticationTableComenAnonimo/{idRest}/{table}/{idDCMClientAndroid}/{locale}/{comensales}",
+   "request": {
+    "$ref": "MenuAndroid",
+    "parameterName": "resource"
+   },
+   "response": {
+    "$ref": "ResponseAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "updateClient": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.updateClient",
+   "parameterOrder": [
+    "idRest"
+   ],
+   "parameters": {
+    "idRest": {
+     "location": "query",
+     "required": true,
+     "type": "string"
+    }
+   },
+   "path": "updateClient",
+   "request": {
+    "$ref": "ClientUserAndroid",
+    "parameterName": "resource"
+   },
+   "response": {
+    "$ref": "ResponseAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "updateClientGeneral": {
+   "httpMethod": "POST",
+   "id": "clientandroidendpoint.updateClientGeneral",
+   "path": "updateClientGeneral",
+   "request": {
+    "$ref": "ClientUserAndroid",
+    "parameterName": "resource"
+   },
+   "response": {
+    "$ref": "ResponseAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "updateSaleIdFCM": {
+   "httpMethod": "PUT",
+   "id": "clientandroidendpoint.updateSaleIdFCM",
+   "parameterOrder": [
+    "idRest",
+    "idSale",
+    "idFCM",
+    "oldId"
+   ],
+   "parameters": {
+    "idRest": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idSale": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "idFCM": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    },
+    "oldId": {
+     "location": "path",
+     "required": true,
+     "type": "string"
+    }
+   },
+   "path": "responseandroid/{idRest}/{idSale}/{idFCM}/{oldId}",
+   "response": {
+    "$ref": "ResponseAndroid"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  }
+ },
+ "name": "clientandroidendpoint",
+ "ownerDomain": "outondev.com",
+ "ownerName": "outondev.com",
+ "packagePath": "pikotea.backend.endpoint",
+ "parameters": {
+  "alt": {
+   "default": "json",
+   "description": "Data format for the response.",
+   "enum": [
+    "json"
+   ],
+   "enumDescriptions": [
+    "Responses with Content-Type of application/json"
+   ],
+   "location": "query",
+   "type": "string"
+  },
+  "fields": {
+   "description": "Selector specifying which fields to include in a partial response.",
+   "location": "query",
+   "type": "string"
+  },
+  "key": {
+   "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
+   "location": "query",
+   "type": "string"
+  },
+  "oauth_token": {
+   "description": "OAuth 2.0 token for the current user.",
+   "location": "query",
+   "type": "string"
+  },
+  "prettyPrint": {
+   "default": "true",
+   "description": "Returns response with indentations and line breaks.",
+   "location": "query",
+   "type": "boolean"
+  },
+  "quotaUser": {
+   "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters. Overrides userIp if both are provided.",
+   "location": "query",
+   "type": "string"
+  },
+  "userIp": {
+   "description": "IP address of the site where the request originates. Use this if you want to enforce per-user limits.",
+   "location": "query",
+   "type": "string"
+  }
+ },
+ "protocol": "rest",
+ "rootUrl": "https://pikotea-server-2.appspot.com/_ah/api/",
+ "schemas": {
+  "BookingAndroid": {
+   "id": "BookingAndroid",
+   "properties": {
+    "codTicket": {
+     "type": "string"
+    },
+    "comment": {
+     "type": "string"
+    },
+    "date": {
+     "format": "int64",
+     "type": "string"
+    },
+    "duration": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "id": {
+     "type": "string"
+    },
+    "idSale": {
+     "type": "string"
+    },
+    "lang": {
+     "type": "string"
+    },
+    "mail": {
+     "type": "string"
+    },
+    "name": {
+     "type": "string"
+    },
+    "number": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "origen": {
+     "type": "string"
+    },
+    "pax": {
+     "$ref": "Map_String_Integer"
+    },
+    "phone": {
+     "type": "string"
+    },
+    "prepagado": {
+     "format": "int64",
+     "type": "string"
+    },
+    "profileId": {
+     "type": "string"
+    },
+    "promo": {
+     "type": "string"
+    },
+    "reason": {
+     "type": "string"
+    },
+    "room": {
+     "type": "string"
+    },
+    "specs": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "state": {
+     "type": "string"
+    },
+    "table": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    }
+   },
+   "type": "object"
+  },
+  "BookingConfig": {
+   "id": "BookingConfig",
+   "properties": {
+    "canChoose": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "cancelMin": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "confirm": {
+     "type": "boolean"
+    },
+    "duration": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "horario": {
+     "items": {
+      "$ref": "TimeInterval"
+     },
+     "type": "array"
+    },
+    "informTime": {
+     "type": "boolean"
+    },
+    "name": {
+     "type": "string"
+    },
+    "price": {
+     "format": "int64",
+     "type": "string"
+    },
+    "reservable": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "selfAccept": {
+     "$ref": "BookingSelfAccept"
+    },
+    "specs": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "timeInterval": {
+     "format": "int32",
+     "type": "integer"
+    }
+   },
+   "type": "object"
+  },
+  "BookingSelfAccept": {
+   "id": "BookingSelfAccept",
+   "properties": {
+    "active": {
+     "type": "boolean"
+    },
+    "maxDiners": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "maxTotalBookings": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "maxTotalDiners": {
+     "format": "int32",
+     "type": "integer"
+    }
+   },
+   "type": "object"
+  },
+  "CajonAuto": {
+   "id": "CajonAuto",
+   "properties": {
+    "ip": {
+     "type": "string"
+    },
+    "model": {
+     "format": "int32",
+     "type": "integer"
+    }
+   },
+   "type": "object"
+  },
+  "CashItem": {
+   "id": "CashItem",
+   "properties": {
+    "mail": {
+     "type": "string"
+    },
+    "quant": {
+     "format": "float",
+     "type": "number"
+    },
+    "text": {
+     "type": "string"
+    },
+    "time": {
+     "format": "int64",
+     "type": "string"
+    }
+   },
+   "type": "object"
+  },
+  "ClientUserAndroid": {
+   "id": "ClientUserAndroid",
+   "properties": {
+    "address": {
+     "type": "string"
+    },
+    "advice": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "birthDay": {
+     "type": "string"
+    },
+    "cif": {
+     "type": "string"
+    },
+    "credit": {
+     "format": "float",
+     "type": "number"
+    },
+    "dateLast": {
+     "format": "int64",
+     "type": "string"
+    },
+    "id": {
+     "type": "string"
+    },
+    "idFCM": {
+     "type": "string"
+    },
+    "mail": {
+     "type": "string"
+    },
+    "name": {
+     "type": "string"
+    },
+    "nifs": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "numPed": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "phone": {
+     "type": "string"
+    },
+    "piKoins": {
+     "format": "float",
+     "type": "number"
+    },
+    "sales": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "state": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "texto": {
+     "type": "string"
+    },
+    "totalBookings": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "totalGastado": {
+     "format": "float",
+     "type": "number"
+    }
+   },
+   "type": "object"
+  },
+  "CollectionResponse_RestaurantAndroid": {
+   "id": "CollectionResponse_RestaurantAndroid",
+   "properties": {
+    "items": {
+     "items": {
+      "$ref": "RestaurantAndroid"
+     },
+     "type": "array"
+    },
+    "nextPageToken": {
+     "type": "string"
+    }
+   },
+   "type": "object"
+  },
+  "ComandaFormat": {
+   "id": "ComandaFormat",
+   "properties": {
+    "sections": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "type": {
+     "format": "int32",
+     "type": "integer"
+    }
+   },
+   "type": "object"
+  },
+  "EmployeeAndroid": {
+   "id": "EmployeeAndroid",
+   "properties": {
+    "ape": {
+     "type": "string"
+    },
+    "debit": {
+     "format": "float",
+     "type": "number"
+    },
+    "id": {
+     "type": "string"
+    },
+    "idRest": {
+     "type": "string"
+    },
+    "mail": {
+     "type": "string"
+    },
+    "name": {
+     "type": "string"
+    },
+    "profiles": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "role": {
+     "format": "int32",
+     "type": "integer"
+    }
+   },
+   "type": "object"
+  },
+  "EscandalloFormat": {
+   "id": "EscandalloFormat",
+   "properties": {
+    "idFormat": {
+     "type": "string"
+    },
+    "items": {
+     "items": {
+      "$ref": "EscandalloItem"
+     },
+     "type": "array"
+    }
+   },
+   "type": "object"
+  },
+  "EscandalloItem": {
+   "id": "EscandalloItem",
+   "properties": {
+    "idStock": {
+     "type": "string"
+    },
+    "name": {
+     "type": "string"
+    },
+    "quant": {
+     "format": "float",
+     "type": "number"
+    },
+    "unit": {
+     "format": "int32",
+     "type": "integer"
+    }
+   },
+   "type": "object"
+  },
+  "Extra": {
+   "id": "Extra",
+   "properties": {
+    "amount": {
+     "type": "string"
+    },
+    "approval": {
+     "type": "string"
+    },
+    "authorizator": {
+     "type": "string"
+    },
+    "card_brand": {
+     "type": "string"
+    },
+    "card_country": {
+     "type": "string"
+    },
+    "card_trade": {
+     "type": "string"
+    },
+    "card_type": {
+     "type": "string"
+    },
+    "cof_id": {
+     "type": "string"
+    },
+    "currency": {
+     "type": "string"
+    },
+    "description": {
+     "type": "string"
+    },
+    "expiration": {
+     "type": "string"
+    },
+    "masked_card": {
+     "type": "string"
+    },
+    "order": {
+     "type": "string"
+    },
+    "reconciliation": {
+     "type": "string"
+    },
+    "request_id": {
+     "type": "string"
+    },
+    "status": {
+     "type": "boolean"
+    },
+    "status_code": {
+     "type": "string"
+    },
+    "transaction_id": {
+     "type": "string"
+    }
+   },
+   "type": "object"
+  },
+  "ExtraAndroid": {
+   "id": "ExtraAndroid",
+   "properties": {
+    "allergy": {
+     "items": {
+      "format": "int32",
+      "type": "integer"
+     },
+     "type": "array"
+    },
+    "formats": {
+     "items": {
+      "$ref": "ExtraInfoFormat"
+     },
+     "type": "array"
+    },
+    "id": {
+     "type": "string"
+    },
+    "name": {
+     "type": "string"
+    }
+   },
+   "type": "object"
+  },
+  "ExtraInfoFormat": {
+   "id": "ExtraInfoFormat",
+   "properties": {
+    "escandallo": {
+     "items": {
+      "$ref": "EscandalloItem"
+     },
+     "type": "array"
+    },
+    "idFormat": {
+     "type": "string"
+    },
+    "price": {
+     "format": "float",
+     "type": "number"
+    }
+   },
+   "type": "object"
+  },
+  "ExtraLimits": {
+   "id": "ExtraLimits",
+   "properties": {
+    "max": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "min": {
+     "format": "int32",
+     "type": "integer"
+    }
+   },
+   "type": "object"
+  },
+  "InvoiceAndroid": {
+   "id": "InvoiceAndroid",
+   "properties": {
+    "address": {
+     "type": "string"
+    },
+    "businessAddress": {
+     "type": "string"
+    },
+    "businessNIF": {
+     "type": "string"
+    },
+    "businessPhone": {
+     "type": "string"
+    },
+    "businessTaxName": {
+     "type": "string"
+    },
+    "date": {
+     "format": "int64",
+     "type": "string"
+    },
+    "id": {
+     "type": "string"
+    },
+    "idSaleHistoric": {
+     "type": "string"
+    },
+    "mail": {
+     "type": "string"
+    },
+    "nif": {
+     "type": "string"
+    },
+    "phone": {
+     "type": "string"
+    },
+    "state": {
+     "type": "string"
+    },
+    "taxName": {
+     "type": "string"
+    }
+   },
+   "type": "object"
+  },
+  "Iva": {
+   "id": "Iva",
+   "properties": {
+    "id": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "name": {
+     "type": "string"
+    },
+    "value": {
+     "format": "float",
+     "type": "number"
+    }
+   },
+   "type": "object"
+  },
+  "JsonMap": {
+   "id": "JsonMap",
+   "type": "object"
+  },
+  "Kitchen": {
+   "id": "Kitchen",
+   "properties": {
+    "name": {
+     "type": "string"
+    },
+    "stateAK": {
+     "format": "int32",
+     "type": "integer"
+    }
+   },
+   "type": "object"
+  },
+  "Map_String_Float": {
+   "additionalProperties": {
+    "format": "float",
+    "type": "number"
+   },
+   "id": "Map_String_Float",
+   "type": "object"
+  },
+  "Map_String_HashMap_String_String": {
+   "additionalProperties": {
+    "$ref": "Map_String_String"
+   },
+   "id": "Map_String_HashMap_String_String",
+   "type": "object"
+  },
+  "Map_String_Integer": {
+   "additionalProperties": {
+    "format": "int32",
+    "type": "integer"
+   },
+   "id": "Map_String_Integer",
+   "type": "object"
+  },
+  "Map_String_Long": {
+   "additionalProperties": {
+    "format": "int64",
+    "type": "string"
+   },
+   "id": "Map_String_Long",
+   "type": "object"
+  },
+  "Map_String_Object": {
+   "additionalProperties": {
+    "$ref": "_any"
+   },
+   "id": "Map_String_Object",
+   "type": "object"
+  },
+  "Map_String_PaymentAndroid": {
+   "additionalProperties": {
+    "$ref": "PaymentAndroid"
+   },
+   "id": "Map_String_PaymentAndroid",
+   "type": "object"
+  },
+  "Map_String_ProfileHourAndroid": {
+   "additionalProperties": {
+    "$ref": "ProfileHourAndroid"
+   },
+   "id": "Map_String_ProfileHourAndroid",
+   "type": "object"
+  },
+  "Map_String_String": {
+   "additionalProperties": {
+    "type": "string"
+   },
+   "id": "Map_String_String",
+   "type": "object"
+  },
+  "MenuAndroid": {
+   "id": "MenuAndroid",
+   "properties": {
+    "crc": {
+     "format": "int64",
+     "type": "string"
+    },
+    "id": {
+     "type": "string"
+    },
+    "name": {
+     "type": "string"
+    },
+    "offers": {
+     "items": {
+      "$ref": "OfferAndroid"
+     },
+     "type": "array"
+    },
+    "offersName": {
+     "type": "string"
+    },
+    "sections": {
+     "items": {
+      "$ref": "SectionAndroid"
+     },
+     "type": "array"
+    }
+   },
+   "type": "object"
+  },
+  "OfferAndroid": {
+   "id": "OfferAndroid",
+   "properties": {
+    "days": {
+     "items": {
+      "format": "int32",
+      "type": "integer"
+     },
+     "type": "array"
+    },
+    "desc": {
+     "type": "string"
+    },
+    "destino": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "hide": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "id": {
+     "type": "string"
+    },
+    "img": {
+     "type": "string"
+    },
+    "ivaId": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "name": {
+     "type": "string"
+    },
+    "numSections": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "price": {
+     "format": "float",
+     "type": "number"
+    },
+    "sectionId": {
+     "type": "string"
+    },
+    "sections": {
+     "items": {
+      "$ref": "OfferSectionAndroid"
+     },
+     "type": "array"
+    },
+    "tipo": {
+     "format": "int32",
+     "type": "integer"
+    }
+   },
+   "type": "object"
+  },
+  "OfferSectionAndroid": {
+   "id": "OfferSectionAndroid",
+   "properties": {
+    "disc": {
+     "format": "float",
+     "type": "number"
+    },
+    "items": {
+     "items": {
+      "$ref": "OfferSectionItem"
+     },
+     "type": "array"
+    },
+    "maxEx": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "name": {
+     "type": "string"
+    },
+    "numItems": {
+     "format": "int32",
+     "type": "integer"
+    }
+   },
+   "type": "object"
+  },
+  "OfferSectionItem": {
+   "id": "OfferSectionItem",
+   "properties": {
+    "format": {
+     "type": "string"
+    },
+    "price": {
+     "format": "float",
+     "type": "number"
+    },
+    "prod": {
+     "type": "string"
+    },
+    "quant": {
+     "format": "int32",
+     "type": "integer"
+    }
+   },
+   "type": "object"
+  },
+  "OrderAndroid": {
+   "id": "OrderAndroid",
+   "properties": {
+    "crc": {
+     "format": "int64",
+     "type": "string"
+    },
+    "dateCreation": {
+     "format": "int64",
+     "type": "string"
+    },
+    "id": {
+     "type": "string"
+    },
+    "orderItems": {
+     "items": {
+      "$ref": "OrderItemAndroid"
+     },
+     "type": "array"
+    },
+    "participantUid": {
+     "type": "string"
+    },
+    "saleId": {
+     "type": "string"
+    },
+    "state": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "stateDescription": {
+     "type": "string"
+    },
+    "textDescription": {
+     "type": "string"
+    }
+   },
+   "type": "object"
+  },
+  "OrderItemAndroid": {
+   "id": "OrderItemAndroid",
+   "properties": {
+    "id": {
+     "type": "string"
+    },
+    "offerId": {
+     "type": "string"
+    },
+    "orden": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "orderId": {
+     "type": "string"
+    },
+    "presentation": {
+     "type": "string"
+    },
+    "price": {
+     "format": "float",
+     "type": "number"
+    },
+    "product": {
+     "$ref": "ProductAndroid"
+    },
+    "quantity": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "state": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "sublineKey": {
+     "type": "string"
+    },
+    "text": {
+     "type": "string"
+    },
+    "times": {
+     "$ref": "Map_String_Long"
+    }
+   },
+   "type": "object"
+  },
+  "Payload": {
+   "id": "Payload",
+   "properties": {
+    "amount": {
+     "type": "string"
+    },
+    "approval": {
+     "type": "string"
+    },
+    "authorizator": {
+     "type": "string"
+    },
+    "card_brand": {
+     "type": "string"
+    },
+    "card_country": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "card_trade": {
+     "type": "string"
+    },
+    "card_type": {
+     "type": "string"
+    },
+    "code": {
+     "type": "string"
+    },
+    "cof_id": {
+     "type": "string"
+    },
+    "currency": {
+     "type": "string"
+    },
+    "expiration": {
+     "type": "string"
+    },
+    "extra": {
+     "$ref": "Extra"
+    },
+    "masked_card": {
+     "type": "string"
+    },
+    "order": {
+     "type": "string"
+    },
+    "payment_method_name": {
+     "type": "string"
+    },
+    "reconciliation": {
+     "type": "string"
+    },
+    "status": {
+     "type": "boolean"
+    },
+    "status_code": {
+     "type": "string"
+    },
+    "transaction_id": {
+     "type": "string"
+    }
+   },
+   "type": "object"
+  },
+  "PaymentAndroid": {
+   "id": "PaymentAndroid",
+   "properties": {
+    "amount": {
+     "format": "int64",
+     "type": "string"
+    },
+    "devolution": {
+     "$ref": "PaymentDevolution"
+    },
+    "ecommerce": {
+     "$ref": "PaymentResponseEcommerce"
+    },
+    "id": {
+     "type": "string"
+    },
+    "items": {
+     "$ref": "Map_String_String"
+    },
+    "paymentMethod": {
+     "type": "string"
+    },
+    "pinpad": {
+     "$ref": "PaymentAndroidPinPad"
+    },
+    "posId": {
+     "type": "string"
+    },
+    "profile": {
+     "type": "string"
+    },
+    "reservationId": {
+     "type": "string"
+    },
+    "softPosDataTmp": {
+     "type": "string"
+    },
+    "tip": {
+     "format": "int64",
+     "type": "string"
+    }
+   },
+   "type": "object"
+  },
+  "PaymentAndroidPinPad": {
+   "id": "PaymentAndroidPinPad",
+   "properties": {
+    "aclaratory": {
+     "type": "string"
+    },
+    "acrcode": {
+     "type": "string"
+    },
+    "aid": {
+     "type": "string"
+    },
+    "amount": {
+     "type": "string"
+    },
+    "appLabel": {
+     "type": "string"
+    },
+    "authorizationMode": {
+     "type": "string"
+    },
+    "authorizationNumber": {
+     "type": "string"
+    },
+    "cardHolder": {
+     "type": "string"
+    },
+    "cardNumber": {
+     "type": "string"
+    },
+    "city": {
+     "type": "string"
+    },
+    "contactlessLiteral": {
+     "type": "string"
+    },
+    "currencySimbol": {
+     "type": "string"
+    },
+    "dataInputType": {
+     "type": "string"
+    },
+    "dataVerificationType": {
+     "type": "string"
+    },
+    "dateTime": {
+     "type": "string"
+    },
+    "ddfname": {
+     "type": "string"
+    },
+    "extraData1": {
+     "type": "string"
+    },
+    "extraData2": {
+     "type": "string"
+    },
+    "fuccode": {
+     "type": "string"
+    },
+    "hcp": {
+     "type": "string"
+    },
+    "infoText": {
+     "type": "string"
+    },
+    "operationType": {
+     "type": "string"
+    },
+    "sequenceNumber": {
+     "type": "string"
+    },
+    "store": {
+     "type": "string"
+    },
+    "terminal": {
+     "type": "string"
+    },
+    "terminalLabel": {
+     "type": "string"
+    },
+    "terminalSequence": {
+     "type": "string"
+    }
+   },
+   "type": "object"
+  },
+  "PaymentDevolution": {
+   "id": "PaymentDevolution",
+   "properties": {
+    "amount": {
+     "format": "int64",
+     "type": "string"
+    },
+    "date": {
+     "format": "int64",
+     "type": "string"
+    },
+    "ecommerce": {
+     "$ref": "PaymentResponseEcommerce"
+    },
+    "pinpad": {
+     "$ref": "PaymentAndroidPinPad"
+    },
+    "posId": {
+     "type": "string"
+    },
+    "profile": {
+     "type": "string"
+    }
+   },
+   "type": "object"
+  },
+  "PaymentResponseEcommerce": {
+   "id": "PaymentResponseEcommerce",
+   "properties": {
+    "code": {
+     "type": "string"
+    },
+    "description": {
+     "type": "string"
+    },
+    "detail": {
+     "type": "string"
+    },
+    "payload": {
+     "$ref": "Payload"
+    },
+    "paymentMethodType": {
+     "type": "string"
+    },
+    "request_id": {
+     "type": "string"
+    },
+    "type": {
+     "type": "string"
+    },
+    "uuid": {
+     "type": "string"
+    }
+   },
+   "type": "object"
+  },
+  "PresentationAndroid": {
+   "id": "PresentationAndroid",
+   "properties": {
+    "description": {
+     "type": "string"
+    },
+    "id": {
+     "type": "string"
+    },
+    "name": {
+     "type": "string"
+    }
+   },
+   "type": "object"
+  },
+  "PrinterAndroid": {
+   "id": "PrinterAndroid",
+   "properties": {
+    "cash": {
+     "type": "boolean"
+    },
+    "cloudDesc": {
+     "type": "string"
+    },
+    "cloudPrinterId": {
+     "type": "string"
+    },
+    "id": {
+     "type": "string"
+    },
+    "idRest": {
+     "type": "string"
+    },
+    "kitchen": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "lineSize": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "mIP": {
+     "type": "string"
+    },
+    "mMAC": {
+     "type": "string"
+    },
+    "name": {
+     "type": "string"
+    },
+    "protocol": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "textSize": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "ticket": {
+     "type": "boolean"
+    },
+    "wifiSSID": {
+     "type": "string"
+    }
+   },
+   "type": "object"
+  },
+  "ProductAndroid": {
+   "id": "ProductAndroid",
+   "properties": {
+    "allergy": {
+     "items": {
+      "format": "int32",
+      "type": "integer"
+     },
+     "type": "array"
+    },
+    "blobId": {
+     "type": "string"
+    },
+    "comPos": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "description": {
+     "type": "string"
+    },
+    "escandallo": {
+     "items": {
+      "$ref": "EscandalloFormat"
+     },
+     "type": "array"
+    },
+    "extras": {
+     "items": {
+      "$ref": "ExtraAndroid"
+     },
+     "type": "array"
+    },
+    "extrasBlocksNames": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "extrasLimits": {
+     "items": {
+      "$ref": "ExtraLimits"
+     },
+     "type": "array"
+    },
+    "extrasList": {
+     "items": {
+      "items": {
+       "$ref": "ExtraAndroid"
+      },
+      "type": "array"
+     },
+     "type": "array"
+    },
+    "family": {
+     "type": "string"
+    },
+    "id": {
+     "type": "string"
+    },
+    "initState": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "ivaId": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "name": {
+     "type": "string"
+    },
+    "nota": {
+     "$ref": "Rating"
+    },
+    "time": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "vega": {
+     "type": "boolean"
+    },
+    "vege": {
+     "type": "boolean"
+    }
+   },
+   "type": "object"
+  },
+  "ProfileAndroid": {
+   "id": "ProfileAndroid",
+   "properties": {
+    "debit": {
+     "format": "int64",
+     "type": "string"
+    },
+    "icon": {
+     "type": "string"
+    },
+    "id": {
+     "type": "string"
+    },
+    "inactive": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "lastHours": {
+     "$ref": "Map_String_ProfileHourAndroid"
+    },
+    "name": {
+     "type": "string"
+    },
+    "pin": {
+     "type": "string"
+    },
+    "role": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "skills": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    }
+   },
+   "type": "object"
+  },
+  "ProfileHourAndroid": {
+   "id": "ProfileHourAndroid",
+   "properties": {
+    "comment": {
+     "$ref": "Map_String_String"
+    },
+    "dateEnd": {
+     "format": "int64",
+     "type": "string"
+    },
+    "dateIni": {
+     "format": "int64",
+     "type": "string"
+    },
+    "id": {
+     "type": "string"
+    },
+    "idProfile": {
+     "type": "string"
+    }
+   },
+   "type": "object"
+  },
+  "Rating": {
+   "id": "Rating",
+   "properties": {
+    "count": {
+     "format": "int64",
+     "type": "string"
+    },
+    "sum": {
+     "format": "double",
+     "type": "number"
+    }
+   },
+   "type": "object"
+  },
+  "ResponseAndroid": {
+   "id": "ResponseAndroid",
+   "properties": {
+    "account": {
+     "type": "string"
+    },
+    "bookings": {
+     "items": {
+      "$ref": "BookingAndroid"
+     },
+     "type": "array"
+    },
+    "bookingsToDelete": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "carta": {
+     "$ref": "MenuAndroid"
+    },
+    "cashHistory": {
+     "items": {
+      "$ref": "RestaurantCashHistoryAndroid"
+     },
+     "type": "array"
+    },
+    "cashInfo": {
+     "$ref": "RestaurantCashInfo"
+    },
+    "cliente": {
+     "$ref": "ClientUserAndroid"
+    },
+    "idRest": {
+     "type": "string"
+    },
+    "invoices": {
+     "items": {
+      "$ref": "InvoiceAndroid"
+     },
+     "type": "array"
+    },
+    "message": {
+     "type": "string"
+    },
+    "order": {
+     "$ref": "OrderAndroid"
+    },
+    "pay": {
+     "$ref": "RestaurantPayInfoAndroid"
+    },
+    "printers": {
+     "items": {
+      "$ref": "PrinterAndroid"
+     },
+     "type": "array"
+    },
+    "product": {
+     "$ref": "ProductAndroid"
+    },
+    "profiles": {
+     "items": {
+      "$ref": "ProfileAndroid"
+     },
+     "type": "array"
+    },
+    "response": {
+     "type": "boolean"
+    },
+    "restList": {
+     "$ref": "Map_String_String"
+    },
+    "restaurant": {
+     "$ref": "RestaurantAndroid"
+    },
+    "rol": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "salas": {
+     "items": {
+      "$ref": "Sala"
+     },
+     "type": "array"
+    },
+    "sale": {
+     "$ref": "SaleAndroid"
+    },
+    "saleHist": {
+     "$ref": "SaleHistoricAndroid"
+    },
+    "saleHistList": {
+     "items": {
+      "$ref": "SaleHistoricAndroid"
+     },
+     "type": "array"
+    },
+    "section": {
+     "$ref": "SectionAndroid"
+    },
+    "sectionLine": {
+     "$ref": "SectionLineAndroid"
+    },
+    "staff": {
+     "items": {
+      "$ref": "EmployeeAndroid"
+     },
+     "type": "array"
+    },
+    "stock": {
+     "items": {
+      "$ref": "StockAndroid"
+     },
+     "type": "array"
+    },
+    "tiposRest": {
+     "$ref": "Map_String_HashMap_String_String"
+    }
+   },
+   "type": "object"
+  },
+  "ResponseStripe": {
+   "id": "ResponseStripe",
+   "properties": {
+    "cards": {
+     "$ref": "Map_String_String"
+    },
+    "id": {
+     "type": "string"
+    }
+   },
+   "type": "object"
+  },
+  "RestaurantAndroid": {
+   "id": "RestaurantAndroid",
+   "properties": {
+    "aplaz": {
+     "type": "boolean"
+    },
+    "autoAceptOrders": {
+     "type": "boolean"
+    },
+    "blobId": {
+     "type": "string"
+    },
+    "bookingConfig": {
+     "$ref": "BookingConfig"
+    },
+    "cajonAuto": {
+     "$ref": "CajonAuto"
+    },
+    "camarero": {
+     "type": "boolean"
+    },
+    "categories": {
+     "items": {
+      "format": "int32",
+      "type": "integer"
+     },
+     "type": "array"
+    },
+    "cif": {
+     "type": "string"
+    },
+    "cocinas": {
+     "items": {
+      "$ref": "Kitchen"
+     },
+     "type": "array"
+    },
+    "comandaFormat": {
+     "$ref": "ComandaFormat"
+    },
+    "contactMail": {
+     "type": "string"
+    },
+    "crc": {
+     "format": "int64",
+     "type": "string"
+    },
+    "defFormat": {
+     "type": "string"
+    },
+    "description": {
+     "type": "string"
+    },
+    "dinersRequired": {
+     "type": "boolean"
+    },
+    "disabledServ": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "domPhone": {
+     "type": "boolean"
+    },
+    "domPrice": {
+     "format": "float",
+     "type": "number"
+    },
+    "domTime": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "fiscalName": {
+     "type": "string"
+    },
+    "formasPago": {
+     "items": {
+      "format": "int32",
+      "type": "integer"
+     },
+     "type": "array"
+    },
+    "formasPagoPers": {
+     "$ref": "Map_String_String"
+    },
+    "hideEmptyPrices": {
+     "type": "boolean"
+    },
+    "horaCorte": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "horario": {
+     "items": {
+      "$ref": "TimeInterval"
+     },
+     "type": "array"
+    },
+    "horarioDom": {
+     "items": {
+      "$ref": "TimeInterval"
+     },
+     "type": "array"
+    },
+    "horarioRec": {
+     "items": {
+      "$ref": "TimeInterval"
+     },
+     "type": "array"
+    },
+    "idMenuDom": {
+     "type": "string"
+    },
+    "idMenuPub": {
+     "type": "string"
+    },
+    "idMenuRec": {
+     "type": "string"
+    },
+    "idRestaurante": {
+     "type": "string"
+    },
+    "idWifi": {
+     "type": "string"
+    },
+    "inactivityTime": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "iva": {
+     "format": "float",
+     "type": "number"
+    },
+    "ivaName": {
+     "type": "string"
+    },
+    "ivas": {
+     "items": {
+      "$ref": "Iva"
+     },
+     "type": "array"
+    },
+    "langs": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "latitude": {
+     "type": "string"
+    },
+    "longitude": {
+     "type": "string"
+    },
+    "menus": {
+     "items": {
+      "$ref": "MenuAndroid"
+     },
+     "type": "array"
+    },
+    "minPrice": {
+     "format": "float",
+     "type": "number"
+    },
+    "moneda": {
+     "type": "string"
+    },
+    "nota": {
+     "$ref": "Rating"
+    },
+    "passwords": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "paymentMethodsPOS": {
+     "items": {
+      "format": "int32",
+      "type": "integer"
+     },
+     "type": "array"
+    },
+    "pcs": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "pedidosOn": {
+     "type": "boolean"
+    },
+    "pedidosOpenCash": {
+     "type": "boolean"
+    },
+    "phone": {
+     "type": "string"
+    },
+    "phoneWA": {
+     "type": "string"
+    },
+    "recPhone": {
+     "type": "boolean"
+    },
+    "recTime": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "recoger": {
+     "type": "boolean"
+    },
+    "restPcs": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "restaurantAddress": {
+     "type": "string"
+    },
+    "restaurantName": {
+     "type": "string"
+    },
+    "salas": {
+     "items": {
+      "$ref": "Sala"
+     },
+     "type": "array"
+    },
+    "secCode": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "servDom": {
+     "type": "boolean"
+    },
+    "servPrice": {
+     "format": "float",
+     "type": "number"
+    },
+    "servPriceName": {
+     "type": "string"
+    },
+    "servPriceType": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "showTimes": {
+     "type": "boolean"
+    },
+    "sipay": {
+     "$ref": "SipayPOSInfo"
+    },
+    "stripeID": {
+     "type": "string"
+    },
+    "tables": {
+     "items": {
+      "$ref": "Table"
+     },
+     "type": "array"
+    },
+    "ticketBlobId": {
+     "type": "string"
+    },
+    "ticketTxt": {
+     "type": "string"
+    },
+    "tips": {
+     "items": {
+      "format": "int32",
+      "type": "integer"
+     },
+     "type": "array"
+    }
+   },
+   "type": "object"
+  },
+  "RestaurantCashHistoryAndroid": {
+   "id": "RestaurantCashHistoryAndroid",
+   "properties": {
+    "cashInfo": {
+     "$ref": "RestaurantCashInfo"
+    },
+    "fin": {
+     "format": "int64",
+     "type": "string"
+    },
+    "id": {
+     "type": "string"
+    },
+    "ini": {
+     "format": "int64",
+     "type": "string"
+    },
+    "label": {
+     "type": "string"
+    }
+   },
+   "type": "object"
+  },
+  "RestaurantCashInfo": {
+   "id": "RestaurantCashInfo",
+   "properties": {
+    "cashMoney": {
+     "format": "float",
+     "type": "number"
+    },
+    "cashNumber": {
+     "format": "int64",
+     "type": "string"
+    },
+    "close": {
+     "format": "int64",
+     "type": "string"
+    },
+    "log": {
+     "items": {
+      "$ref": "CashItem"
+     },
+     "type": "array"
+    },
+    "open": {
+     "format": "int64",
+     "type": "string"
+    },
+    "resumen": {
+     "$ref": "ResumenVentas"
+    },
+    "sales": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    }
+   },
+   "type": "object"
+  },
+  "RestaurantListAndroid": {
+   "id": "RestaurantListAndroid",
+   "properties": {
+    "count": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "list": {
+     "$ref": "CollectionResponse_RestaurantAndroid"
+    }
+   },
+   "type": "object"
+  },
+  "RestaurantPayInfoAndroid": {
+   "id": "RestaurantPayInfoAndroid",
+   "properties": {
+    "cashMoney": {
+     "format": "float",
+     "type": "number"
+    },
+    "codFactura": {
+     "format": "int64",
+     "type": "string"
+    },
+    "codFacturaSimp": {
+     "format": "int64",
+     "type": "string"
+    },
+    "dateCreat": {
+     "format": "int64",
+     "type": "string"
+    },
+    "dateRen": {
+     "format": "int64",
+     "type": "string"
+    },
+    "lastUpd": {
+     "format": "int64",
+     "type": "string"
+    },
+    "limit": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "mod": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "numPed": {
+     "format": "int64",
+     "type": "string"
+    },
+    "preInvoice": {
+     "type": "string"
+    },
+    "subscription": {
+     "$ref": "Map_String_String"
+    }
+   },
+   "type": "object"
+  },
+  "ResumenEmpleado": {
+   "id": "ResumenEmpleado",
+   "properties": {
+    "diaComensales": {
+     "$ref": "Map_String_Integer"
+    },
+    "diaFacturado": {
+     "$ref": "Map_String_Float"
+    },
+    "diaMesas": {
+     "$ref": "Map_String_Integer"
+    },
+    "facturado": {
+     "format": "float",
+     "type": "number"
+    },
+    "mail": {
+     "type": "string"
+    },
+    "numPedidos": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "timeFirst": {
+     "format": "int64",
+     "type": "string"
+    },
+    "timeLast": {
+     "format": "int64",
+     "type": "string"
+    }
+   },
+   "type": "object"
+  },
+  "ResumenVentas": {
+   "id": "ResumenVentas",
+   "properties": {
+    "codTicketMax": {
+     "format": "int64",
+     "type": "string"
+    },
+    "codTicketMin": {
+     "format": "int64",
+     "type": "string"
+    },
+    "descuadre": {
+     "format": "float",
+     "type": "number"
+    },
+    "descuadreVisa": {
+     "format": "float",
+     "type": "number"
+    },
+    "diaComensales": {
+     "$ref": "Map_String_Integer"
+    },
+    "diaDomicilio": {
+     "$ref": "Map_String_Integer"
+    },
+    "diaFacturado": {
+     "$ref": "Map_String_Float"
+    },
+    "diaMesas": {
+     "$ref": "Map_String_Integer"
+    },
+    "diaRecoger": {
+     "$ref": "Map_String_Integer"
+    },
+    "empleados": {
+     "items": {
+      "$ref": "ResumenEmpleado"
+     },
+     "type": "array"
+    },
+    "recuento": {
+     "format": "float",
+     "type": "number"
+    },
+    "recuentoManual": {
+     "format": "float",
+     "type": "number"
+    },
+    "recuentoManualVisa": {
+     "format": "float",
+     "type": "number"
+    },
+    "recuentoVisa": {
+     "format": "float",
+     "type": "number"
+    },
+    "saldoTrasCierre": {
+     "format": "float",
+     "type": "number"
+    },
+    "ticketFin": {
+     "format": "int64",
+     "type": "string"
+    },
+    "ticketIni": {
+     "format": "int64",
+     "type": "string"
+    },
+    "ticketsNoPagados": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "ticketsPagados": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "totalBote": {
+     "format": "float",
+     "type": "number"
+    },
+    "totalCajonAuto": {
+     "format": "float",
+     "type": "number"
+    },
+    "totalCancelado": {
+     "format": "float",
+     "type": "number"
+    },
+    "totalCheque": {
+     "format": "float",
+     "type": "number"
+    },
+    "totalComensales": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "totalDescuento": {
+     "format": "float",
+     "type": "number"
+    },
+    "totalDom": {
+     "format": "float",
+     "type": "number"
+    },
+    "totalEfectivo": {
+     "format": "float",
+     "type": "number"
+    },
+    "totalEliminados": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "totalFacturado": {
+     "format": "float",
+     "type": "number"
+    },
+    "totalInvita": {
+     "format": "float",
+     "type": "number"
+    },
+    "totalMovil": {
+     "format": "float",
+     "type": "number"
+    },
+    "totalNP": {
+     "format": "float",
+     "type": "number"
+    },
+    "totalOtro": {
+     "format": "float",
+     "type": "number"
+    },
+    "totalRec": {
+     "format": "float",
+     "type": "number"
+    },
+    "totalTarjeta": {
+     "format": "float",
+     "type": "number"
+    },
+    "totalTickets": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "totalValorEliminado": {
+     "format": "float",
+     "type": "number"
+    },
+    "totalesFPagoPers": {
+     "$ref": "Map_String_Float"
+    }
+   },
+   "type": "object"
+  },
+  "Sala": {
+   "id": "Sala",
+   "properties": {
+    "bookingConfig": {
+     "$ref": "BookingConfig"
+    },
+    "idMenu": {
+     "type": "string"
+    },
+    "mesas": {
+     "items": {
+      "$ref": "Table"
+     },
+     "type": "array"
+    },
+    "name": {
+     "type": "string"
+    }
+   },
+   "type": "object"
+  },
+  "SaleAndroid": {
+   "id": "SaleAndroid",
+   "properties": {
+    "address": {
+     "type": "string"
+    },
+    "buyerMail": {
+     "type": "string"
+    },
+    "clientLocale": {
+     "type": "string"
+    },
+    "comensales": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "dateCreation": {
+     "format": "int64",
+     "type": "string"
+    },
+    "dateEntrega": {
+     "format": "int64",
+     "type": "string"
+    },
+    "domicilio": {
+     "type": "boolean"
+    },
+    "formaPago": {
+     "$ref": "Map_String_Float"
+    },
+    "id": {
+     "type": "string"
+    },
+    "idBooking": {
+     "type": "string"
+    },
+    "idGCMAndroid": {
+     "type": "string"
+    },
+    "idMenu": {
+     "type": "string"
+    },
+    "idTicket": {
+     "format": "int64",
+     "type": "string"
+    },
+    "infoMap": {
+     "$ref": "Map_String_Object"
+    },
+    "orders": {
+     "items": {
+      "$ref": "OrderAndroid"
+     },
+     "type": "array"
+    },
+    "participants": {
+     "items": {
+      "$ref": "SaleParticipant"
+     },
+     "type": "array"
+    },
+    "payed": {
+     "type": "boolean"
+    },
+    "payments": {
+     "$ref": "Map_String_PaymentAndroid"
+    },
+    "phone": {
+     "type": "string"
+    },
+    "repartidor": {
+     "type": "string"
+    },
+    "restMail": {
+     "type": "string"
+    },
+    "state": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "stripe": {
+     "type": "string"
+    },
+    "table": {
+     "type": "string"
+    }
+   },
+   "type": "object"
+  },
+  "SaleHistoricAndroid": {
+   "id": "SaleHistoricAndroid",
+   "properties": {
+    "address": {
+     "type": "string"
+    },
+    "buyerMail": {
+     "type": "string"
+    },
+    "cashNumber": {
+     "format": "int64",
+     "type": "string"
+    },
+    "codFactura": {
+     "format": "int64",
+     "type": "string"
+    },
+    "codTicket": {
+     "format": "int64",
+     "type": "string"
+    },
+    "comensales": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "comment": {
+     "type": "string"
+    },
+    "date": {
+     "format": "int64",
+     "type": "string"
+    },
+    "dateIni": {
+     "format": "int64",
+     "type": "string"
+    },
+    "formaPago": {
+     "$ref": "Map_String_Float"
+    },
+    "id": {
+     "type": "string"
+    },
+    "idBooking": {
+     "type": "string"
+    },
+    "idInvoice": {
+     "type": "string"
+    },
+    "items": {
+     "items": {
+      "$ref": "OrderItemAndroid"
+     },
+     "type": "array"
+    },
+    "payments": {
+     "$ref": "Map_String_PaymentAndroid"
+    },
+    "phone": {
+     "type": "string"
+    },
+    "repartidor": {
+     "type": "string"
+    },
+    "restMail": {
+     "type": "string"
+    },
+    "state": {
+     "type": "string"
+    },
+    "stripe": {
+     "type": "string"
+    },
+    "table": {
+     "type": "string"
+    },
+    "total": {
+     "format": "float",
+     "type": "number"
+    },
+    "verifactuQR": {
+     "type": "string"
+    }
+   },
+   "type": "object"
+  },
+  "SaleParticipant": {
+   "id": "SaleParticipant",
+   "properties": {
+    "email": {
+     "type": "string"
+    },
+    "name": {
+     "type": "string"
+    },
+    "owner": {
+     "type": "boolean"
+    },
+    "state": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "tokenFCM": {
+     "type": "string"
+    },
+    "uid": {
+     "type": "string"
+    }
+   },
+   "type": "object"
+  },
+  "SectionAndroid": {
+   "id": "SectionAndroid",
+   "properties": {
+    "crc": {
+     "format": "int64",
+     "type": "string"
+    },
+    "days": {
+     "items": {
+      "format": "int32",
+      "type": "integer"
+     },
+     "type": "array"
+    },
+    "hidden": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "id": {
+     "type": "string"
+    },
+    "lines": {
+     "items": {
+      "$ref": "SectionLineAndroid"
+     },
+     "type": "array"
+    },
+    "name": {
+     "type": "string"
+    },
+    "orderIndex": {
+     "format": "int32",
+     "type": "integer"
+    }
+   },
+   "type": "object"
+  },
+  "SectionLineAndroid": {
+   "id": "SectionLineAndroid",
+   "properties": {
+    "id": {
+     "type": "string"
+    },
+    "pos": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "product": {
+     "$ref": "ProductAndroid"
+    },
+    "subLines": {
+     "items": {
+      "$ref": "SectionLineDetailsAndroid"
+     },
+     "type": "array"
+    }
+   },
+   "type": "object"
+  },
+  "SectionLineDetailsAndroid": {
+   "id": "SectionLineDetailsAndroid",
+   "properties": {
+    "blobId": {
+     "type": "string"
+    },
+    "days": {
+     "items": {
+      "format": "int32",
+      "type": "integer"
+     },
+     "type": "array"
+    },
+    "hidden": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "id": {
+     "type": "string"
+    },
+    "presentation": {
+     "$ref": "PresentationAndroid"
+    },
+    "price": {
+     "format": "float",
+     "type": "number"
+    }
+   },
+   "type": "object"
+  },
+  "SipayPOSInfo": {
+   "id": "SipayPOSInfo",
+   "properties": {
+    "idClient": {
+     "type": "string"
+    },
+    "idStore": {
+     "type": "string"
+    },
+    "pinPads": {
+     "items": {
+      "$ref": "SipayPOSInfoPinPad"
+     },
+     "type": "array"
+    },
+    "qrScreen": {
+     "type": "boolean"
+    },
+    "qrTicket": {
+     "type": "boolean"
+    },
+    "table": {
+     "type": "boolean"
+    },
+    "tableForce": {
+     "type": "boolean"
+    },
+    "tablePartial": {
+     "type": "boolean"
+    }
+   },
+   "type": "object"
+  },
+  "SipayPOSInfoPinPad": {
+   "id": "SipayPOSInfoPinPad",
+   "properties": {
+    "model": {
+     "type": "string"
+    },
+    "posId": {
+     "type": "string"
+    },
+    "profiles": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    }
+   },
+   "type": "object"
+  },
+  "StockAndroid": {
+   "id": "StockAndroid",
+   "properties": {
+    "id": {
+     "type": "string"
+    },
+    "idMaster": {
+     "type": "string"
+    },
+    "name": {
+     "type": "string"
+    },
+    "price": {
+     "format": "float",
+     "type": "number"
+    },
+    "quant": {
+     "format": "float",
+     "type": "number"
+    },
+    "unit": {
+     "format": "int32",
+     "type": "integer"
+    }
+   },
+   "type": "object"
+  },
+  "StripeCardPikotea": {
+   "id": "StripeCardPikotea",
+   "properties": {
+    "c": {
+     "type": "string"
+    },
+    "m": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "n": {
+     "type": "string"
+    },
+    "y": {
+     "format": "int32",
+     "type": "integer"
+    }
+   },
+   "type": "object"
+  },
+  "Table": {
+   "id": "Table",
+   "properties": {
+    "bookingConfig": {
+     "$ref": "BookingConfig"
+    },
+    "id": {
+     "type": "string"
+    },
+    "kitchen": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "maxPax": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "minPax": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "name": {
+     "type": "string"
+    },
+    "priority": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "type": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "x": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "y": {
+     "format": "int32",
+     "type": "integer"
+    }
+   },
+   "type": "object"
+  },
+  "TimeInterval": {
+   "id": "TimeInterval",
+   "properties": {
+    "dias": {
+     "items": {
+      "format": "int32",
+      "type": "integer"
+     },
+     "type": "array"
+    },
+    "fin": {
+     "format": "int32",
+     "type": "integer"
+    },
+    "ini": {
+     "format": "int32",
+     "type": "integer"
+    }
+   },
+   "type": "object"
+  },
+  "_any": {
+   "id": "_any",
+   "type": "any"
+  }
+ },
+ "servicePath": "clientandroidendpoint/v1/",
+ "version": "v1"
+}

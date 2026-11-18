@@ -1,14 +1,9 @@
-# Imágenes originales de Shelbyville
+# Recursos de imagen de Shelbyville Café
 
-El avatar del perfil oficial ya está guardado localmente como `shelbyville-logo.jpg` (150 × 150 px).
-Se usa en la cabecera sin modificar. El archivo corresponde a la imagen de perfil de Instagram;
-no es una versión en alta resolución del logotipo ilustrado completo.
+- `logo/shelbyville-logo.png`: logotipo original proporcionado para este proyecto; se usa en la cabecera sin editar ni deformar.
+- `local/`: fotografía auténtica del interior, pendiente de incorporar.
+- `productos/`: fotografías autorizadas de la carta, pendientes de incorporar.
 
-Cuando esté disponible el logotipo original completo, guárdalo como `shelbyville-logo.png` y
-actualiza la ruta en `src/main.jsx`.
+Se transcribieron 19 productos visibles en dos capturas de Pikotea. Las capturas muestran fotos, pero no se copiaron ni recortaron como archivos de producto; las fotos autorizadas del interior y de la carta siguen pendientes.
 
-Para la portada y la sección «Nuestro espacio», añade la fotografía real del interior como
-`shelbyville-interior.jpg`. El perfil público no expuso imágenes de las publicaciones en esta
-consulta, así que no se han usado fotos de terceros ni se han presentado fotos genéricas como propias.
-
-La demo muestra un aviso para la foto del interior hasta que ese archivo esté disponible.
+La transcripción es parcial: faltan categorías y detalles que no aparecen en las capturas. La aplicación señala los precios, descripciones y opciones que no se pudieron verificar.
